@@ -8,7 +8,95 @@
 
 body {
   min-height: 100vh;
+
   font-family: Lato, Helvetica, sans-serif;
-  background: linear-gradient(to right, #36d1dc, #5b86e5);
+  background: linear-gradient(to right, #36d1dc, hsl(221, 73%, 63%));
   padding: clamp(20px, 5vw, 50px) 10px 10px;
+  --fs-std: 1rem;
+  --fs-moy: 2rem;
+  --fs-grde: 3rem;
+  --col-err: rgb(218, 65, 65);
+  --col-cont: white;
+  --padd: 0.5rem;
+  --pad-text: 0.5rem;
+  --larg-inp: 15rem;
+  --vert-offset: 2px;
+  --hori-offset: 2px;
+  --blur: 10px;
+  --color: hsla(28, 78%, 7%, 0.627);
+}
+h1 {
+  text-align: center;
+}
+.container {
+  display: grid;
+  width: 60vw;
+  max-width: calc(100% - 5rem);
+  margin: auto;
+  background-color: var(--col-cont);
+}
+form {
+  width: 100%;
+  display: flex;
+  padding: var(--padd);
+  margin: auto;
+  flex-direction: column;
+}
+.input_cont {
+  display: grid;
+ grid-auto-flow: column;
+ justify-content: center;
+}
+label {
+  width: fit-content;
+  padding: var(--pad-text);
+}
+input {
+  padding: var(--pad-text);
+  width: var(--larg-inp);
+}
+.form_dial {
+  box-shadow: var(--vert-offset) var(--hori-offset) var(--blur) var(--color);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.input_blck {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--padd);
+  margin:auto;
+}
+.output {
+  display: grid;
+  width: 100%;
+  font-size: var(--fs-moy);
+  margin: auto;
+  text-align: center;
+  padding: 10px var(--padd);
+}
+.imc {
+  font-size: var(--fs-grde);
+  height: var(--fs-grde)
+}
+
+.go {
+  padding: 1rem var(--padd);
+  margin:  1rem auto;
+  background-color: orange;
+  border: none;
+  border-radius: 0.2rem;
+}
+.go:hover {
+  transform: scale(1.04);
+}
+@media screen and (max-width: 900px){
+  .input_cont{
+    grid-auto-flow: row;
+  }
+  .container{
+    width: 40vw;min-width: 20rem;
+  }
 }

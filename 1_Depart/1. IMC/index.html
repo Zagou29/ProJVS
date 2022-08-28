@@ -17,22 +17,27 @@
 
 <body>
   <div class="container">
-    <div class="calc_box">
-      <h1>Calculer votre IMC</h1>
-      <div class="input_box">
-        <label for="taille">Votre Taille en Cm</label>
-        <input type="number" id="taille" placeholder="180" max="100" min="200">
-        <label for="poids">Votre Taille en Cm</label>
-        <input type="number" id="poids" placeholder="70" max="50" min="150">
+    <h1>Calculer votre IMC</h1>
+    <form action="">
+      <div class="input_cont">
+        <div class="input_blck">
+          <label for="taille">Votre taille en centimetres</label>
+          <input class= "form_dial" type="number" id="taille" placeholder="Taille" max="200" min="100">
+        </div>
+        <div class="input_blck">
+          <label for="poids">Votre poids en kg</label>
+          <input class= "form_dial" type="number" id="poids" placeholder="Poids " step="0.1" max="180" min="20">
+        </div>
       </div>
-      <button type="button" class="go">Calculez</button>
-      <span class="resultat">0</span>
-      <p class="alerte">en attente de résultat</p>
+      <button class="go form_dial">Calculez votre IMC</button>
+    </form>
 
-
+    <div class="output">
+      <span class="imc"></span>
+      <p class="commentaire"> en attente de résultat</p>
     </div>
   </div>
-<div class="test"></div>
+
 
 </body>
 
